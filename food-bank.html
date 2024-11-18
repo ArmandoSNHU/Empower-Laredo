@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Bank Finder - Empower Laredo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Food Bank Finder</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="volunteer.html">Volunteer Connection</a></li>
+                    <li><a href="food-bank.html" class="active">Food Bank Finder</a></li>
+                    <li><a href="mental-health.html">Mental Health</a></li>
+                    <li><a href="books.html">Free Online Books</a></li>
+                    <li><a href="disaster-relief.html">Disaster Relief</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <h2>Find Food Banks Near You</h2>
+            <p>Enter your ZIP code below to search for food banks in your area. Help us fight hunger in our community!</p>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="zip-code" placeholder="Enter your ZIP code">
+                <button onclick="findFoodBanks()" class="btn-primary">Search</button>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results" class="results">
+                <p>Results will appear here...</p>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="content">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Enter your ZIP code in the search bar above.</li>
+                <li>View a list of nearby food banks and their details.</li>
+                <li>Contact the food bank directly to donate or get assistance.</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Empower Laredo. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function findFoodBanks() {
+            const zipCode = document.getElementById('zip-code').value;
+
+            if (zipCode) {
+                // Placeholder logic for fetching results (replace with real API later)
+                document.getElementById('results').innerHTML = `
+                    <ul>
+                        <li><strong>Laredo Food Bank</strong>: 123 Main Street, Laredo, TX - (123) 456-7890</li>
+                        <li><strong>Gateway City Food Center</strong>: 456 Elm Street, Laredo, TX - (123) 987-6543</li>
+                        <li><strong>Rio Grande Food Pantry</strong>: 789 Maple Avenue, Laredo, TX - (123) 555-1212</li>
+                    </ul>
+                `;
+            } else {
+                alert('Please enter a ZIP code.');
+            }
+        }
+    </script>
+</body>
+</html>

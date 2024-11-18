@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Connection - Empower Laredo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Volunteer Connection</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="volunteer.html" class="active">Volunteer Connection</a></li>
+                    <li><a href="food-bank.html">Food Bank Finder</a></li>
+                    <li><a href="mental-health.html">Mental Health</a></li>
+                    <li><a href="books.html">Free Online Books</a></li>
+                    <li><a href="disaster-relief.html">Disaster Relief</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <h2>Connect with Volunteer Opportunities</h2>
+            <p>Empower Laredo makes it easy to find and connect with volunteer opportunities in your community. Register below to get started as a volunteer or a non-profit organization.</p>
+
+            <!-- Volunteer/Non-Profit Registration Form -->
+            <form id="volunteer-form">
+                <h3>Register Now</h3>
+
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="role">I am a:</label>
+                <select id="role" name="role" required>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="non-profit">Non-Profit Organization</option>
+                </select>
+
+                <label for="skills">Skills/Interests:</label>
+                <textarea id="skills" name="skills" placeholder="Tell us about your skills and interests"></textarea>
+
+                <button type="submit" class="btn-primary">Submit</button>
+            </form>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="content">
+            <h2>How It Works</h2>
+            <ol>
+                <li>Register as a volunteer or non-profit organization.</li>
+                <li>Volunteers can search for opportunities based on their skills and availability.</li>
+                <li>Non-profits can post opportunities and connect with volunteers.</li>
+                <li>Start making a difference in the Laredo community!</li>
+            </ol>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Empower Laredo. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Handle form submission
+        document.getElementById('volunteer-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const role = document.getElementById('role').value;
+            const skills = document.getElementById('skills').value;
+
+            console.log(`Name: ${name}, Email: ${email}, Role: ${role}, Skills: ${skills}`);
+            alert('Thank you for registering! We’ll be in touch soon.');
+        });
+    </script>
+</body>
+</html>
